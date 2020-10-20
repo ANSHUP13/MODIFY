@@ -4,18 +4,18 @@ from django.shortcuts import render
 
 def index(request):
     return render(request,'index2.html')
+
 def about(request):
     return render(request,'about.html')
+
 def contact(request):
     return render(request,'contact.html')
 
 def analyse(request):
     def capfrist(t):
         return t.capitalize()
-
     def countchar(t):
         return len(t)
-
     def removepunc(t):
         s = ''
         for j in t:
@@ -45,5 +45,3 @@ def analyse(request):
         n = countchar(t)
     param = {'t':t,'n':n}
     return render(request,'analyse2.html',param)
-
-
